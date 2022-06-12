@@ -6,15 +6,14 @@
 int main(){
     
     int i,nv[i];
-    int* maior,* menor;
-    tMaximos nMax;
+    tMaximos nMax,* maior,* menor;
 
     printf("Digite a lista de numeros:\n");
     scanf("%d\n",&i);
 
     vetornumeros(nv,i,maior,menor);
     
-    printf("maximo: %d", nMax.max);
-    printf("minimo: %d", nMax.min);
+    printf("maximo: %d", maior->max);
+    printf("minimo: %d", menor->min);
 
 }    

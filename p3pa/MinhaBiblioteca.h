@@ -8,6 +8,6 @@ typedef struct maximos{
 
 }tMaximos;
 
-void vetornumeros(int* pV , int size,int* maior, int* menor);
+void vetornumeros(int* pV , int size, tMaximos *a, tMaximos *b);
 
 #endif

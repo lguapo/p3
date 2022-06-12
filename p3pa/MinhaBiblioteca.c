@@ -3,36 +3,37 @@
 #include <stdlib.h>
 #include <math.h>
 
-void vetornumeros(int* vn, int szv,int* maior, int* menor){
+void vetornumeros(int* vn, int szv,tMaximos *maior,tMaximos *menor){
 
     int n, auxn , vetnum[szv];
-    tMaximos tNum , *psMax, *psMin;
-
-    psMax = &maior;
-    psMin = &menor;
+    tMaximos tNum;
 
     for(int j = 0; j<szv ; j++){
         
         scanf("\n%d", &n);
         vetnum[j] = n;
 
-        if((n =! vetnum[j-1])&&(j>0)){
+        if(j==0){
+            maior->max = n;
+        }
+        else{
+            if(n != vetnum[j-1]){
            
-            if(n > vetnum[j-1]){
+                if(n > vetnum[j-1]){
 
-                psMax->max = n;
-                printf("max = %d\n", );
-            }
-            else{
-                if(n < vetnum[j-1]){
-
-                    psMin->min = n;
-                    printf("min = %d\n", );
+                    maior->max = n;
+               
                 }
-            }
+                else{
+                    if(n < vetnum[j-1]){
 
-        } 
-        printf("\n%d",vetnum[j]);   
-    }
+                        menor->min = n;
+                    
+                    }
+                }
 
+            } 
+            printf("\n%d",vetnum[j]);   
+        }
+    }    
 }
