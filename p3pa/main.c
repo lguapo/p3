@@ -16,4 +16,5 @@ int main(){
     printf("maximo: %d", maior->max);
     printf("minimo: %d", menor->min);
 
+    return 0;
 }    
