@@ -6,7 +6,6 @@
 void vetornumeros(int* vn, int szv,tMaximos *maior,tMaximos *menor){
 
     int n, auxn , vetnum[szv];
-    tMaximos tNum;
 
     for(int j = 0; j<szv ; j++){
         

@@ -6,7 +6,7 @@
 int main(){
     
     int i,nv[i];
-    tMaximos nMax,* maior,* menor;
+    tMaximos * maior,* menor;
 
     printf("Digite a lista de numeros:\n");
     scanf("%d\n",&i);
