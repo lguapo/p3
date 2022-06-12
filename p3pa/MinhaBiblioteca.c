@@ -1,38 +1,46 @@
 #include "minhabiblioteca.h"
 #include <stdio.h>
 #include <stdlib.h>
-#include <math.h>
+
 
 void vetornumeros(int* vn, int szv,tMaximos *maior,tMaximos *menor){
 
-    int n, auxn , vetnum[szv];
+    int n, vetnum[szv];
 
     for(int j = 0; j<szv ; j++){
         
-        scanf("\n%d", &n);
+        scanf("%d", &n);
+        getchar();
         vetnum[j] = n;
 
-        if(j==0){
-            maior->max = n;
+        if(j == 0){
+            maior->max = vetnum[j];
+            menor->min = vetnum[j];
         }
         else{
-            if(n != vetnum[j-1]){
-           
-                if(n > vetnum[j-1]){
+            if(vetnum[j] < menor->min){
 
-                    maior->max = n;
+                menor->min = vetnum[j];
                
-                }
-                else{
-                    if(n < vetnum[j-1]){
+            }
+            else{
+                if(vetnum[j] >= maior->max){
 
-                        menor->min = n;
+                    maior->max = vetnum[j];
                     
-                    }
                 }
+            }
 
-            } 
-            printf("\n%d",vetnum[j]);   
-        }
-    }    
+        }      
+    }
+    printf("\nVetor:\n");
+    for(int j = 0;j<szv;j++){
+        
+        printf("%d",vetnum[j]);
+        
+        if(j != szv-1){
+
+            printf(" , ");
+        } 
+    }
 }
