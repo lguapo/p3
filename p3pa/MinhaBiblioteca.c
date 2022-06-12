@@ -6,25 +6,28 @@
 void vetornumeros(int* vn, int szv,int* maior, int* menor){
 
     int n, auxn , vetnum[szv];
-    tMaximos tNum;
+    tMaximos tNum , *psMax, *psMin;
+
+    psMax = &maior;
+    psMin = &menor;
 
     for(int j = 0; j<szv ; j++){
         
-        scanf("\n%d", n);
+        scanf("\n%d", &n);
         vetnum[j] = n;
-        auxn = n;
-        if((auxn =! vetnum[j-1])&&(j>0)){
-           
-            if(auxn < vetnum[j-1]){
 
-                maior = &vetnum[j-1];
-                printf("max = %d\n", *maior);
+        if((n =! vetnum[j-1])&&(j>0)){
+           
+            if(n > vetnum[j-1]){
+
+                psMax->max = n;
+                printf("max = %d\n", );
             }
             else{
-                if(auxn > vetnum[j-1]){
+                if(n < vetnum[j-1]){
 
-                    menor = &vetnum[j-1];
-                    printf("min = %d\n", *menor);
+                    psMin->min = n;
+                    printf("min = %d\n", );
                 }
             }
 
